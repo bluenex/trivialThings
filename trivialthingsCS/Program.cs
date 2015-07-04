@@ -4,63 +4,102 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
-using dxldllforUnity2;
-using Sharpduino;
-using Sharpduino.Constants;
+//using dxldllforUnity2;
+//using Sharpduino;
+//using Sharpduino.Constants;
+using dcDLLforUnity;
+
 
 namespace trivialthingsCS
 {
-    public class Alpha
-    {
-        // This method that will be called when the thread is started
-        public int Beta(int i)
-        {
-            int j = 0;
-            while (j < i)
-            {
-                j++;
-                Console.WriteLine("i = {0}, j = {1}", i, j);
-            }
-            return j;
-        }
-    }
+//    public class Alpha
+//    {
+//        // This method that will be called when the thread is started
+//        public int Beta(int i)
+//        {
+//            int j = 0;
+//            while (j < i)
+//            {
+//                j++;
+//                Console.WriteLine("i = {0}, j = {1}", i, j);
+//            }
+//            return j;
+//        }
+//    }
 
     class Program
     {
         static void Main(string[] args)
         {
-            // Arduino controlling
-            int PWMvalue = 1;
+            //int i = 0;
+            int target = 187;
+            dcAction dcControl = new dcAction("COM4");
+            dcControl.Init();
+            dcControl.WritePWM(target);
 
-            var arduino = new ArduinoUno("COM21");
-            while (!arduino.IsInitialized) ;
-            arduino.SetPinMode(ArduinoUnoPins.D11_PWM, PinModes.PWM);
-            Console.WriteLine("set pin 11 as PWM");
+            //while (i<100000)
+            //{
+                Console.WriteLine(dcControl.ReadLine());
+                //Console.WriteLine(i++);
+            //    i++;
+            //}
 
-            while (PWMvalue != 0)
-            {
-                Console.WriteLine("please set PWM value in range 1-255...");
-                bool parseInt = Int32.TryParse(Console.ReadLine(), out PWMvalue);
+            dcControl.WritePWM(0);
 
-                if (!parseInt)
-                {
-                    Console.WriteLine("your input is not string nor convertable number.");
-                    PWMvalue = 0;
-                }
+            //while (i<100000)
+            //{
+                Console.WriteLine(dcControl.ReadLine());
+                //Console.WriteLine(i++);
+            //    i++;
+            //}
 
+            Console.WriteLine(dcControl.IsOpen());
+            dcControl.Terminate();
 
-                arduino.SetPWM(ArduinoUnoPWMPins.D11_PWM, PWMvalue);
-                Console.WriteLine("set PWM = {0}", PWMvalue);
-                Console.WriteLine("fill 0 to exit or set any number in range 1-255 to continue.");
-            }
+            Console.WriteLine(dcControl.IsOpen());
+            # region sharpduino
+            //// Arduino controlling
+            //int PWMvalue = 1;
 
-            arduino.SetPWM(ArduinoUnoPWMPins.D11_PWM, 0);
-            Console.WriteLine("set PWM = 0");
-            Console.WriteLine("disposing...");
-            arduino.Dispose();
-            Console.WriteLine("arduino disposed, press any key to terminate..");
+            //var arduino = new ArduinoUno("COM21");
+            //while (!arduino.IsInitialized) ;
+            //arduino.SetPinMode(ArduinoUnoPins.D11_PWM, PinModes.PWM);
+            //Console.WriteLine("set pin 11 as PWM");
 
-            #region
+            //while (PWMvalue != 0)
+            //{
+            //    Console.WriteLine("please set PWM value in range 1-255...");
+            //    bool parseInt = Int32.TryParse(Console.ReadLine(), out PWMvalue);
+
+            //    if (!parseInt)
+            //    {
+            //        Console.WriteLine("your input is not string nor convertable number.");
+            //        PWMvalue = 0;
+            //    }
+
+            //    //int[] aa = Enumerable.Range(1, 11).ToArray();
+            //    //Array.Reverse(aa);
+
+            //    //foreach (int i in aa)
+            //    //{
+            //    //    Console.WriteLine(i);
+            //    //    arduino.SetPWM(ArduinoUnoPWMPins.D11_PWM, PWMvalue/i);
+            //    //    Thread.Sleep(750);
+            //    //}
+
+            //    arduino.SetPWM(ArduinoUnoPWMPins.D11_PWM, PWMvalue);
+
+            //    Console.WriteLine("set PWM = {0}", PWMvalue);
+            //    Console.WriteLine("fill 0 to exit or set any number in range 1-255 to continue.");
+            //}
+
+            //arduino.SetPWM(ArduinoUnoPWMPins.D11_PWM, 0);
+            //Console.WriteLine("set PWM = 0");
+            //Console.WriteLine("disposing...");
+            //arduino.Dispose();
+            //Console.WriteLine("arduino disposed, press any key to terminate..");
+            #endregion
+            #region fundamental
             //Console.WriteLine("Thread Start/Stop/Join Sample");
 
             //Alpha oAlpha = new Alpha();

@@ -21,3 +21,11 @@ D:\OneDrive\Projects\trivialthingsCS\trivialthingsCS\obj\Debug\trivialthingsCS.c
 D:\tulfolder\LocalProjects\trivialthingsCS\trivialthingsCS\bin\Debug\trivialthingsCS.exe.config
 D:\tulfolder\LocalProjects\trivialthingsCS\trivialthingsCS\obj\Debug\trivialthingsCS.exe
 D:\tulfolder\LocalProjects\trivialthingsCS\trivialthingsCS\obj\Debug\trivialthingsCS.pdb
+D:\tulfolder\LocalProjects\trivialthingsCS\trivialthingsCS\bin\Debug\trivialthingsCS.exe
+D:\tulfolder\LocalProjects\trivialthingsCS\trivialthingsCS\bin\Debug\trivialthingsCS.pdb
+D:\tulfolder\LocalProjects\trivialthingsCS\trivialthingsCS\bin\Debug\dxldllforUnity.pdb
+D:\tulfolder\LocalProjects\trivialthingsCS\trivialthingsCS\bin\Debug\Sharpduino.pdb
+D:\tulfolder\LocalProjects\trivialthingsCS\trivialthingsCS\obj\Debug\trivialthingsCS.csprojResolveAssemblyReference.cache
+D:\tulfolder\LocalProjects\trivialthingsCS\trivialthingsCS\bin\Debug\firmataNetUnity.pdb
+D:\tulfolder\LocalProjects\trivialthingsCS\trivialthingsCS\bin\Debug\dcDLLforUnity.dll
+D:\tulfolder\LocalProjects\trivialthingsCS\trivialthingsCS\bin\Debug\dcDLLforUnity.pdb

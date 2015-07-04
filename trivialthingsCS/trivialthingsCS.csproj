@@ -32,8 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="dcDLLforUnity">
+      <HintPath>..\..\dcDLLforUnity\dcDLLforUnity\bin\Debug\dcDLLforUnity.dll</HintPath>
+    </Reference>
     <Reference Include="dxldllforUnity">
       <HintPath>..\..\..\BME\_THESIS\Codes\_UNITYDLLEXPT\CS\dxldllforUnity\dxldllforUnity\bin\Debug\dxldllforUnity.dll</HintPath>
+    </Reference>
+    <Reference Include="firmataNetUnity">
+      <HintPath>..\..\firmataNetUnity\firmataNetUnity\bin\Debug\firmataNetUnity.dll</HintPath>
     </Reference>
     <Reference Include="Sharpduino">
       <HintPath>..\..\sharpduino\Sharpduino\bin\Debug\Sharpduino.dll</HintPath>
