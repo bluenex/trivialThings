@@ -35,8 +35,9 @@
     <Reference Include="dcDLLforUnity">
       <HintPath>..\..\dcDLLforUnity\dcDLLforUnity\bin\Debug\dcDLLforUnity.dll</HintPath>
     </Reference>
-    <Reference Include="dxldllforUnity">
-      <HintPath>..\..\..\BME\_THESIS\Codes\_UNITYDLLEXPT\CS\dxldllforUnity\dxldllforUnity\bin\Debug\dxldllforUnity.dll</HintPath>
+    <Reference Include="dxldllforUnity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThesisProject\Assets\_Libs\dxldllforUnity.dll</HintPath>
     </Reference>
     <Reference Include="firmataNetUnity">
       <HintPath>..\..\firmataNetUnity\firmataNetUnity\bin\Debug\firmataNetUnity.dll</HintPath>
@@ -46,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
